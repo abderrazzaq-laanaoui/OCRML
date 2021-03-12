@@ -60,7 +60,7 @@ canvas.node.onmouseup = function (e) {
 loadModel();
 }
 
-function predict(tfImage) {
+async function predict(tfImage) {
 var output = await model.predict(tfImage);
 var result = Array.from(output.dataSync());
 console.log('Output is : ', Array.from(output.dataSync()));
