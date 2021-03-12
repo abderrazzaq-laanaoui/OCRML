@@ -57,7 +57,7 @@ canvas.node.onmouseup = function (e) {
     canvas.isDrawing = false;
 };
 
-await loadModel();
+loadModel();
 }
 
 function predict(tfImage) {
