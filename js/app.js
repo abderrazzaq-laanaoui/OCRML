@@ -8,7 +8,12 @@
 // the newly created canvas element
 var model;
 async function loadModel() {
-model = await tf.loadLayersModel('model/model.json');
+    try {
+        model = await tf.loadLayersModel('model/model.json');
+        console.log("model loaded")
+    } catch(e) {
+       console.log("the model could not be loaded")
+    }
 }
 
 function createCanvas(parent, width, height) {
