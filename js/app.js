@@ -61,7 +61,7 @@ await loadModel();
 }
 
 function predict(tfImage) {
-var output = model.predict(tfImage);
+var output = await model.predict(tfImage);
 var result = Array.from(output.dataSync());
 console.log('Output is : ', Array.from(output.dataSync()));
 var maxPossibility = result.reduce(function (a, b) { return Math.max(a, b) });
@@ -106,4 +106,9 @@ document.getElementById('clear').addEventListener('click', clear);
 document.getElementById('cnvrtBtn').addEventListener('click', recogniseNumber);
 
 })();
+document.addEventListener('keydown', function(event) {
+    if (event.code == 'Escape') {
+      document.getElementById("clear").click();
+    }
+  });
 
