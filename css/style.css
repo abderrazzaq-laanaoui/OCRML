@@ -1,10 +1,10 @@
 *{
     margin: 0;
-    background-color: #f7f7f7;
+   
     padding: 0;
 }
 body{
-    overflow-y: hidden;
+    overflow: hidden;
 }
 main{
     height: 70vh;
@@ -14,6 +14,7 @@ header{
     justify-content :space-between;
     align-items: center;
     padding: 20px;
+    background-color: #f7f7f7;
 }
 header .logo{
     height: 100px;
@@ -24,35 +25,44 @@ header h3{
     text-transform: uppercase;
     margin: 0;
     padding: 0;
-    color: #1b0f00;
+    font-weight: bolder;
+    color: #1e6f5c;
     font-size: 2rem;
-    font-family: 'Playfair Display';
+    font-family: 'Poppins', serif;
     text-align: center;
     display :flex;
     align-items: center;
 
 }
 .line{
-    background-color: black;
-    height: 1.5px;
+    background-color: #1b2021;
+    height: 3px;
+    width: 100%;
 }
 
 #board{
-    border: 1px solid black;
+    border: 3px solid #1b2021;
+        background-color: #f7f7f7;
+
     padding: 10px;
     margin: 20px;
 }
 #cnvrtBtn{
     font-size: 16px;
-    OUTLINE: NONE;
+    outline: none;
     padding: 10px 20px;
-    border: none;
-    background-color: #6a6e83;
+    border: 3px solid hsl(166, 48%, 43%);
+    background-color: #1e6f5c ;
     border-radius: 6px;
     cursor: pointer;
+    font-family: 'poppins', serif;
+    color: white;
     font-weight: bold;
-    WIDTH: 125px;
-    transition: 1s;
+    width: 125px;
+    transition: 400ms;
+}
+#cnvrtBtn:hover{
+    background-color: #39a189 ;
 
 }
 #cnvrtBtn:active{
@@ -68,7 +78,7 @@ main{
 }
 #box{
     background-color: #f7f7f7;
-    border: 1px black solid;
+    border: 3px #1b2021 solid;
     padding: 10px;
     
 }
@@ -82,12 +92,13 @@ main{
     background-color: white;
     width: 320px;
     height: 320px;
+    color: #1b2021;
     padding: 0 10px 20px 10px;
-    border: 3px solid black;
+    border: 3px solid #5f939a;
 }
 
 #canvas-container{
-    border: 3px solid black;
+    border: 3px solid #5f939a;
     width: fit-content;
     height: 350px;
     margin: 20px 10px;
@@ -96,11 +107,13 @@ main{
 .btn{
     margin-left: 10px;
     background-color: white;
-    border: 2px solid black;
+    border: 2px solid #5f939a;
     cursor: pointer;
+    color: #5f939a;
     padding:5px 10px;
     margin-top: 10px;
     font-weight: bold;
+
 }
 .btn:hover{
     background-color: #ddd;
@@ -108,17 +121,21 @@ main{
 .btn:active{
     transform: scale(0.9);
 }
+
 footer{
     justify-content: center;
-    background-color: #6a6e83;
+    background-color: #1b2021;
     align-items: center;
     padding: 20px;
     display: flex;
+    /* margin-top: 10px; */
 
 }
 #ourName{
-    background-color: #6a6e83;
+    background-color: transparent;
     font-size: 1.4rem;
-    font-family: 'Poppins';
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: bolder;
+    color: #fff;
     text-align: center;
 }
